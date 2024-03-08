@@ -71,6 +71,7 @@ class RestockViewController: UIViewController, UITableViewDataSource , UITableVi
                 alert.addAction(UIAlertAction(title: "Okay", style: .destructive, handler: { action in
                     self.clearInputs()
                 }))
+                selectedProductIndex = -1
                 
             }
             present(alert, animated: true)

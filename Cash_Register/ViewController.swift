@@ -58,6 +58,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewWillAppear(animated)
             
         allProducts = (UIApplication.shared.delegate as? AppDelegate)!.products
+        selectedProductIndex = -1
         productTable.reloadData()
         }
     override func viewDidLoad() {
@@ -96,6 +97,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         type.text = "Type"
         quantity.text = ""
         total.text = "Total"
+    
         
     }
     
@@ -142,6 +144,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }))
             appDelegate!.products = allProducts
              appDelegate!.orders = allOrders
+            selectedProductIndex = -1
         }
         present(alert, animated: true)
 
